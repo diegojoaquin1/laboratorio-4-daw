@@ -1,0 +1,116 @@
+/* Configuración General */
+:root {
+    --primary-blue: #2563eb;
+    --bg-gray: #f1f5f9;
+    --text-dark: #1e293b;
+    --white: #ffffff;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-gray);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex; /* Crea las dos columnas */
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo de Tarjetas (Cards) */
+.card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+/* Columna Izquierda (30% de ancho) */
+.sidebar {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Columna Derecha (70% de ancho) */
+.content {
+    flex: 2;
+}
+
+/* Formulario */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    box-sizing: border-box; /* Evita que el input se salga del borde */
+}
+
+/* Botones */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.btn-secondary {
+    background-color: #64748b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Sección de Estadísticas (Grid de 2 columnas) */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.stat-item h3 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.stat-item p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 5px 0 0;
+    color: var(--primary-blue);
+}
+
+/* Estilo para las fechas en la lista */
+.fecha-header {
+    color: #ef4444; /* Rojo como en tu imagen */
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

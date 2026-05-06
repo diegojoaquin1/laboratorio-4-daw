@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Personal - Lab03</title>
+    <link rel="stylesheet" href="css/styel.css"> </head>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <section class="card">
+                <h2>✏️🥭🥭🥭 Editar Evento</h2>{}
+                <form id="event-form">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" required>
+
+                    <label for="hora">Hora</label>
+                    <input type="time" id="hora" required>
+
+                    <label for="descripcion">Descripción</label>
+                    <textarea id="descripcion" rows="5" placeholder="# Título del evento..."></textarea>
+
+                    <div class="button-group">
+                        <button type="submit" class="btn-primary">Actualizar</button>
+                        <button type="button" id="btn-cancel" class="btn-secondary">Cancelar</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="card view-selector">
+                <h3>Vista</h3>
+                <div class="button-group">
+                    <button id="view-list" class="btn-toggle active">Lista</button>
+                    <button id="view-tree" class="btn-toggle">Estructura</button>
+                </div>
+            </section>
+        </aside>
+
+        <main class="content">
+            <section class="card main-list">
+                <h2>📋 Eventos Programados</h2>
+                <div id="eventos-container">
+                    <p>Cargando eventos...</p>
+                </div>
+            </section>
+
+            <section class="stats-grid">
+                <div class="card stat-item">
+                    <h3>Total Eventos</h3>
+                    <p id="total-eventos">0</p>
+                </div>
+                <div class="card stat-item">
+                    <h3>Fechas Únicas</h3>
+                    <p id="fechas-unicas">0</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <form action="/guardar" method="POST">
+        <input name="nombre">
+        <button>Enviar</button>
+    </form>
+
+    <script src="js/agenda.js"></script>
+</body>
+</html>
